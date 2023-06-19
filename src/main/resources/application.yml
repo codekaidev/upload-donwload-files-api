@@ -32,8 +32,8 @@ app:
   directorystorage: D:/daelh/Downloads/upload/
 
 aws:
-  access-key: AKIA56JTZDUUMAHMDNHV
-  secret-access-key: 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
-  region: us-east-1
-  bucket: up-dw-bucket
+  access-key: abc
+  secret-access-key: abc
+  region: abc
+  bucket: abc
 

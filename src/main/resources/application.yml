@@ -1,0 +1,39 @@
+server:
+  port: 8085
+
+spring:
+  servlet:
+    multipart:
+      #Increment the max file zise to upload a big files
+      max-file-size: 10000MB
+      max-request-size: 10000MB
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3307}/uploaddownloadfiledb?serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc.time_zone: UTC
+        format_sql: true
+    database: MYSQL
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    defer-datasource-initialization: true
+  jackson:
+    date-format: dd/MM/yyyy HH:mm:ss
+    time-zone: UTC
+
+
+app:
+  directorystorage: D:/daelh/Downloads/upload/
+
+aws:
+  access-key: AKIA56JTZDUUMAHMDNHV
+  secret-access-key: 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
+  region: us-east-1
+  bucket: up-dw-bucket
+
